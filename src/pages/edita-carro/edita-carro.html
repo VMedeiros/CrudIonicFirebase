@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Edição</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="fechar()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-item>
+          <ion-label fixed>Dono:</ion-label>
+          <ion-input type="text" [(ngModel)]="carro.dono"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Modelo</ion-label>
+          <ion-select [(ngModel)]="carro.modelo">
+            <ion-option value="Gol">Gol</ion-option>
+            <ion-option value="Fusca">Fusca</ion-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-label>Multa</ion-label>
+          <ion-select [(ngModel)]="carro.multa">
+            <ion-option value="false">Não</ion-option>
+            <ion-option value="true">Sim</ion-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <button ion-button (click)="salvar()">Salvar</button>
+        </ion-item>
+     </ion-list>
+</ion-content>
